@@ -15,10 +15,10 @@ fun Player.sit(location: Location) {
     if (!this.isSit) {
         if (this.isOnGround) {
             val markerSpawnLocation = location.add(0.0, -0.3, 0.0)
-            val marker = this.world.spawn(markerSpawnLocation, Arrow::class.java).apply {
-//                isMarker = true
+            val marker = this.world.spawn(markerSpawnLocation, ArmorStand::class.java).apply {
+                isMarker = true
                 isInvisible = true
-//                isSmall = true
+                isSmall = true
                 isInvulnerable = true
                 customName = this@sit.name
                 isCustomNameVisible = false
